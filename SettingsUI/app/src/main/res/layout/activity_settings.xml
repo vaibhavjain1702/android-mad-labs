@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SettingsActivity"> <ScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/bottom_navigation"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, Minal"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvIdNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID Number: 134HJJSSyrr" /* Replace with actual logic if needed */
+        android:textSize="14sp"
+        android:textColor="@color/grey_text_label"
+        android:layout_marginBottom="24dp"/>
+
+        <TextView
+            style="@style/SettingsSectionHeader"
+            android:text="Available Platforms" />
+
+        <LinearLayout
+            android:layout_width="150dp"  /* Adjust width as needed */
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:background="@drawable/rounded_background_blue"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@android:drawable/ic_dialog_info" /> <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Windows 11"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/SettingsSectionHeader"
+        android:text="App Language"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="you can change your default app interface language at any time."
+        android:textSize="13sp"
+        android:textColor="@color/grey_text_label"
+        android:layout_marginBottom="12dp"/>
+
+    <LinearLayout
+        android:id="@+id/row_language"
+        style="@style/SettingsRowContainer">
+        <ImageView
+            style="@style/SettingsRowIcon"
+            android:src="@android:drawable/ic_menu_mapmode" /> <TextView style="@style/SettingsRowText" android:text="English" />
+        <ImageView style="@style/SettingsRowArrow" /> </LinearLayout>
+
+    <TextView
+        style="@style/SettingsSectionHeader"
+        android:text="User Name"/>
+
+    <LinearLayout
+        android:id="@+id/row_user_name"
+        style="@style/SettingsRowContainer">
+        <ImageView
+            style="@style/SettingsRowIcon"
+            android:src="@android:drawable/ic_menu_myplaces" /> <TextView style="@style/SettingsRowText" android:text="Nishchay Vashishtha" />
+        <ImageView style="@style/SettingsRowArrow" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/SettingsSectionHeader"
+        android:text="Setting"/>
+
+    <LinearLayout
+        android:id="@+id/row_setting_voice"
+        style="@style/SettingsRowContainer">
+        <ImageView
+            style="@style/SettingsRowIcon"
+            android:src="@android:drawable/ic_btn_speak_now" /> <TextView style="@style/SettingsRowText" android:text="voice" />
+        <ImageView style="@style/SettingsRowArrow" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/SettingsSectionHeader"
+        android:text="Theme"/>
+
+    <LinearLayout
+        android:id="@+id/row_theme"
+        style="@style/SettingsRowContainer">
+        <ImageView
+            style="@style/SettingsRowIcon"
+            android:src="@android:drawable/ic_menu_edit" /> <TextView style="@style/SettingsRowText" android:text="Dark" />
+        <ImageView style="@style/SettingsRowArrow" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+
+</LinearLayout>
+</ScrollView>
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+android:id="@+id/bottom_navigation"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+android:background="@color/white"
+app:menu="@menu/bottom_navigation_menu"
+app:labelVisibilityMode="labeled"
+app:itemIconTint="@color/bottom_nav_item_color_selector" /* Needs res/color */
+    app:itemTextColor="@color/bottom_nav_item_color_selector" /* Needs res/color */ />
+
+    </RelativeLayout>

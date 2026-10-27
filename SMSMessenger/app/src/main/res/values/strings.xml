@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SMSMessenger</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="received_sms">Received SMS</string>
+</resources>
