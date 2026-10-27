@@ -24,3 +24,7 @@ Open a folder in Android Studio and sync Gradle (a `local.properties` with your 
 - `MusicPlayer` expects an audio file at `app/src/main/res/raw/sample_music.mp3`, which is not included. Add any MP3 with that name before building.
 - `VideoPlayer` includes a small sample video under `app/src/main/res/raw/`.
 - `SettingsUI` contains a placeholder package declaration (`com.yourpackage.yourapp`) that should be adjusted to match the module's namespace if you hit a build error.
+
+## Report
+
+- [Graded Assignment report (PDF)](docs/GA_CSE5_230697_Vaibhav_Jain.pdf)
